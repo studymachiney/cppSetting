@@ -1,0 +1,2 @@
+# cppSetting
+Basic configuration

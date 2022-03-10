@@ -7,7 +7,7 @@ enable_testing()
 # aux_source_directory(./src/multiple SRCS)
 # add_executable(${PROJECT_NAME} ${SRCS})
 
-add_executable(${PROJECT_NAME} study/1.BitOperation/eor.cpp)
+add_executable(${PROJECT_NAME} study/chapter01/test.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

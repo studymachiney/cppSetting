@@ -14,7 +14,7 @@ int findLocalMinimum(vector<int> &arr)
     while (left < right)
     {
 
-        middle = (left + right) / 2;
+        middle = left + ((right - left)>>1); // ·ÀÖ¹Ê¹ÓÃleft + rightÒç³ö
         cout << left << ' ' << middle << ' ' << right << endl;
         if (arr[middle] > arr[middle - 1])
         {

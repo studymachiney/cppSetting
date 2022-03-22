@@ -3,8 +3,8 @@
 #include <random>
 #include <time.h>
 using namespace std;
-// ºÉÀ¼¹úÆìÎÊÌâ
-// ¸ø¶¨Ò»¸öÊı×éarr£¬ºÍÒ»¸öÊınum£¬Çë°ÑĞ¡ÓÚnumµÄÊı·ÅÔÚÊı×éµÄ×ó±ß£¬µÈÓÚnumµÄÊı·ÅÔÚÊı×éµÄÖĞÎÊ£¬´óÓÚnumµÄÊı·ÅÔÚÊı×éµÄ ÓÒ±ß¡£ÒªÇó¶îÍâ¿Õ¼ä¸´ÔÓ¶ÈO(1)£¬Ê±¼ä¸´ÔÓ¶ÈO(N)
+// è·å…°å›½æ——é—®é¢˜
+// ç»™å®šä¸€ä¸ªæ•°ç»„arrï¼Œå’Œä¸€ä¸ªæ•°numï¼Œè¯·æŠŠå°äºnumçš„æ•°æ”¾åœ¨æ•°ç»„çš„å·¦è¾¹ï¼Œç­‰äºnumçš„æ•°æ”¾åœ¨æ•°ç»„çš„ä¸­é—®ï¼Œå¤§äºnumçš„æ•°æ”¾åœ¨æ•°ç»„çš„ å³è¾¹ã€‚è¦æ±‚é¢å¤–ç©ºé—´å¤æ‚åº¦O(1)ï¼Œæ—¶é—´å¤æ‚åº¦O(N)
 void setAreaArr(vector<int>& arr, int num)
 {
     int n = arr.size(), left = 0, i = 0, right = n - 1;
@@ -24,14 +24,14 @@ void setAreaArr(vector<int>& arr, int num)
         }
     }
 }
-//¿ìËÙÅÅĞò
+//å¿«é€Ÿæ’åº
 vector<int> partition(vector<int>& arr, int L, int R)
 {
     vector<int> result;
-    int less = L - 1; //Ğ¡ÓÚÇøÓÒ±ß½ç
-    int more = R;     //´óÓÚÇø×ó±ß½ç
+    int less = L - 1; //å°äºåŒºå³è¾¹ç•Œ
+    int more = R;     //å¤§äºåŒºå·¦è¾¹ç•Œ
     while (L < more)
-    { // L±íÊ¾µ±Ç°ÊıÎ»ÖÃ
+    { // Lè¡¨ç¤ºå½“å‰æ•°ä½ç½®
         if (arr[L] < arr[R])
         {
             swap(arr[++less], arr[L++]);

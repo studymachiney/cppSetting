@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-// Ò»¸öÊı×é£¬ÓĞÁ½ÖÖÊı³öÏÖÆæÊı´Î£¬ÆäËûÊı³öÏÖÅ¼Êı´Î£¬ÕÒµ½ÕâÁ½ÖÖÊı
+// ä¸€ä¸ªæ•°ç»„ï¼Œæœ‰ä¸¤ç§æ•°å‡ºç°å¥‡æ•°æ¬¡ï¼Œå…¶ä»–æ•°å‡ºç°å¶æ•°æ¬¡ï¼Œæ‰¾åˆ°è¿™ä¸¤ç§æ•°
 void printOddTimesNum(const vector<int> &arr)
 {
     int eor = 0;
@@ -11,8 +11,8 @@ void printOddTimesNum(const vector<int> &arr)
     }
     // eor = a^b
     // eor != 0
-    // eor±ØÈ»ÓĞÒ»¸öÎ»ÖÃÉÏÊÇ1
-    int rightOne = eor & (~eor + 1); // ÌáÈ¡³ö×îÓÒ±ßµÄ1
+    // eorå¿…ç„¶æœ‰ä¸€ä¸ªä½ç½®ä¸Šæ˜¯1
+    int rightOne = eor & (~eor + 1); // æå–å‡ºæœ€å³è¾¹çš„1
 
     int onlyOne = 0;
     for (int cur : arr)

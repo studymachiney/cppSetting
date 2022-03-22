@@ -5,13 +5,13 @@
 #include "tool.h"
 using namespace std;
 
-//²åÈëÅÅĞò
+//æ’å…¥æ’åº
 void insertionSort(vector<int> &arr)
 {
     if (arr.size() < 2)
         return;
     for (int i = 1; i < arr.size(); i++)
-    { // 0~i ÓĞĞò
+    { // 0~i æœ‰åº
         for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--)
         {
             swap(arr, j, j + 1);
@@ -19,7 +19,7 @@ void insertionSort(vector<int> &arr)
     }
 }
 
-//¹é²¢ÅÅĞò
+//å½’å¹¶æ’åº
 void merge(vector<int> &arr, int L, int M, int R)
 {
     int help[R - L + 1];
@@ -55,7 +55,7 @@ int main(int, char **)
 {
     vector<int> arr = generateRandomArray(30, 100);
     insertionSort(arr);
-    cout << "²åÈëÅÅĞò" << endl;
+    cout << "æ’å…¥æ’åº" << endl;
     for (int item : arr)
     {
         cout << item << " ";
@@ -64,14 +64,14 @@ int main(int, char **)
     arr = generateRandomArray(30, 100);
     process(arr, 0, arr.size() - 1);
     cout << endl
-         << "¹é²¢ÅÅĞò" << endl;
+         << "å½’å¹¶æ’åº" << endl;
     for (int item : arr)
     {
         cout << item << " ";
     }
     cout << endl;
 
-    //¶ÔÊıÆ÷²âÊÔ
+    //å¯¹æ•°å™¨æµ‹è¯•
     int testTime = 1000;
     int maxSize = 1000;
     int maxValue = 1000;

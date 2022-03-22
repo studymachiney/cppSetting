@@ -8,14 +8,14 @@ void insertionSort(vector<int> &arr)
     if (arr.size() < 2)
         return;
     for (int i = 1; i < arr.size(); i++)
-    { // 0~i ÓÐÐò
+    { // 0~i æŽ’åº
         for (int j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j--)
         {
             swap(arr, j, j + 1);
         }
     }
 }
-//¶ÔÊýÆ÷
+//å¯¹æ•°å™¨
 int main(int, char **)
 {
     int testTime = 1000;

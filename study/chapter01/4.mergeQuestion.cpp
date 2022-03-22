@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-// Ð¡ºÍÎÊÌâ
-// ÔÚÒ»¸öÊý×éÖÐ£¬Ã¿Ò»¸öÊý×ó±ß±Èµ±Ç°ÊýÐ¡µÄÊýÀÛ¼ÓÆðÀ´£¬½Ð×öÕâ¸öÊý×éµÄÐ¡ºÍ¡£ÇóÒ»¸öÊý×éµÄÐ¡ºÍ¡£
-// Àý×Ó:[1,3,4,2,5]1×ó±ß±È1Ð¡µÄÊý£¬Ã»ÓÐ;3×ó±ß±È3Ð¡µÄÊý£¬1;4×ó±ß±È4Ð¡µÄÊý£¬1¡¢3;2×ó±ß±È2Ð¡µÄÊý£¬1;5×ó±ß±È5Ð¡µÄÊý£¬1¡¢3¡¢4¡¢2;ËùÒÔÐ¡ºÍÎª1+1+3+1+1+3+4+2=16
+// å°å’Œé—®é¢˜
+// åœ¨ä¸€ä¸ªæ•°ç»„ä¸­ï¼Œæ¯ä¸€ä¸ªæ•°å·¦è¾¹æ¯”å½“å‰æ•°å°çš„æ•°ç´¯åŠ èµ·æ¥ï¼Œå«åšè¿™ä¸ªæ•°ç»„çš„å°å’Œã€‚æ±‚ä¸€ä¸ªæ•°ç»„çš„å°å’Œã€‚
+// ä¾‹å­:[1,3,4,2,5]1å·¦è¾¹æ¯”1å°çš„æ•°ï¼Œæ²¡æœ‰;3å·¦è¾¹æ¯”3å°çš„æ•°ï¼Œ1;4å·¦è¾¹æ¯”4å°çš„æ•°ï¼Œ1ã€3;2å·¦è¾¹æ¯”2å°çš„æ•°ï¼Œ1;5å·¦è¾¹æ¯”5å°çš„æ•°ï¼Œ1ã€3ã€4ã€2;æ‰€ä»¥å°å’Œä¸º1+1+3+1+1+3+4+2=16
 int merge(vector<int> &arr, int L, int M, int R)
 {
     int temp[R - L + 1], p1 = L, p2 = M + 1, i = 0, sum = 0;
@@ -36,7 +36,7 @@ int smallSum(vector<int> &arr, int L, int R)
            merge(arr, L, M, R);
 }
 
-//ÄæÐò¶ÔÎÊÌâÔÚÒ»¸öÊý×éÖÐ£¬×ó±ßµÄÊýÈç¹û±ÈÓÒ±ßµÄÊý´ó£¬ÔòÕâÁ½¸öÊý¹¹³ÉÒ»¸öÄæÐò¶Ô£¬Çë´òÓ¡ËùÓÐÄæÐò¶Ô¡£
+//é€†åºå¯¹é—®é¢˜åœ¨ä¸€ä¸ªæ•°ç»„ä¸­ï¼Œå·¦è¾¹çš„æ•°å¦‚æžœæ¯”å³è¾¹çš„æ•°å¤§ï¼Œåˆ™è¿™ä¸¤ä¸ªæ•°æž„æˆä¸€ä¸ªé€†åºå¯¹ï¼Œè¯·æ‰“å°æ‰€æœ‰é€†åºå¯¹ã€‚
 void mergePair(vector<int> &arr, int L, int M, int R)
 {
     int p1 = L, p2 = M + 1, i = 0, temp[R - L + 1];

@@ -22,7 +22,7 @@ int maxbits(vector<int> &arr)
 }
 int getDigit(int num, int d)
 {
-    return ((num/((int)pow(10,d-1)))%10);
+    return ((num / ((int)pow(10, d - 1))) % 10);
 }
 void radixSort(vector<int> &arr, int L, int R, int digit)
 {
@@ -55,8 +55,8 @@ void radixSort(vector<int> &arr, int L, int R, int digit)
 }
 int main()
 {
-     vector<int> arr{1,5,3,2,7,98,77,34,65};
-    radixSort(arr, 0, arr.size()-1, 2);
+    vector<int> arr{1, 5, 3, 2, 7, 98, 77, 34, 65};
+    radixSort(arr, 0, arr.size() - 1, 2);
     for (int item : arr)
     {
         cout << item << " ";

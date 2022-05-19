@@ -54,28 +54,30 @@ void sortedArrDistanceLessK(vector<int> &arr, int k)
 {
     //优先级队列
     // priority_queue<int, vector<int>, less<int>> heap;//不写第三个参数或者写成less都是大根堆
-    priority_queue<int, vector<int>, greater<int>> heap; //greater是小根堆
+    priority_queue<int, vector<int>, greater<int>> heap; // greater是小根堆
     int index = 0;
     for (; index <= min((int)(arr.size()), k); index++)
     {
         heap.push(arr[index]);
     }
-    int i=0;
-    for(;index<arr.size();i++,index++) {
+    int i = 0;
+    for (; index < arr.size(); i++, index++)
+    {
         heap.push(arr[index]);
         arr[i] = heap.top();
         heap.pop();
     }
-    while(!heap.empty()) {
+    while (!heap.empty())
+    {
         arr[i++] = heap.top();
         heap.pop();
     }
 }
 int main()
 {
-    vector<int> arr{1,5,3,2,7,98,77,34,65};
-    // heapSort(arr);
-    sortedArrDistanceLessK(arr, 4);
+    vector<int> arr{1, 5, 3, 2, 7, 98, 77, 34, 65};
+    heapSort(arr);
+    // sortedArrDistanceLessK(arr, 4);
     for (int item : arr)
     {
         cout << item << " ";

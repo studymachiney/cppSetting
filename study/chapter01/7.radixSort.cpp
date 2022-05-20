@@ -7,7 +7,7 @@ using namespace std;
 
 int maxbits(vector<int> &arr)
 {
-    int maxNum = INT_MAX;
+    int maxNum = 0;
     for (int i = 0; i < arr.size(); i++)
     {
         maxNum = max(maxNum, arr[i]);
@@ -61,5 +61,6 @@ int main()
     {
         cout << item << " ";
     }
+    cout << maxbits(arr) << endl;
     return 0;
 }

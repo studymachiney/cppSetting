@@ -17,7 +17,7 @@ void printOddTimesNum(const vector<int> &arr)
     int onlyOne = 0;
     for (int cur : arr)
     {
-        if ((cur & rightOne) == 1)
+        if ((cur & rightOne) != 0)
         {
             onlyOne ^= cur;
         }
